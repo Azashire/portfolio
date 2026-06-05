@@ -1,0 +1,1091 @@
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('../../Polices/ubuntu/Ubuntu-Regular.ttf') format('truetype'),
+	url('../../Polices/ubuntu/Ubuntu-Bold.ttf') format('truetype'),
+	url('../../Polices/ubuntu/Ubuntu-BoldItalic.ttf') format('truetype'),
+	url('../../Polices/ubuntu/Ubuntu-Italic.ttf') format('truetype'),
+	url('../../Polices/ubuntu/Ubuntu-Light.ttf') format('truetype'),
+	url('../../Polices/ubuntu/Ubuntu-LightItalic.ttf') format('truetype'),
+	url('../../Polices/ubuntu/Ubuntu-Medium.ttf') format('truetype'),
+	url('../../Polices/ubuntu/Ubuntu-MediumItalic.ttf') format('truetype');
+}
+
+html {
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #101010;
+	color: white;
+	margin: 0;
+	text-align: justify;
+	padding: 0;
+}
+
+
+
+/*--------------header--------------*/
+header{
+	background-color: #282828;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	border-radius: 20px 20px 0 0;
+}
+header p {
+	text-size-adjust: auto;
+	align-self: center;
+	padding: 5px;
+	font-size: 2.5vw;
+}
+header img{
+	width: 10vw;
+	height: 10vw;
+	padding: 5px;
+	border-radius: 15px;
+}
+
+
+
+/*--------------nav-bar--------------*/
+nav{
+	display: flex;
+	justify-content: space-around;
+	background-color: #282828;
+	border-top: 1px rgba(255, 255, 255, 0.2) solid;
+	border-radius: 0 0 20px 20px;
+}
+
+nav>ul{
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	justify-content: space-around;
+}
+
+nav a{
+	text-decoration: none;
+	color: inherit;
+}
+
+
+
+/*--------------global style--------------*/
+h1,h2,h3,h4,p{
+	margin: 0;
+}
+
+
+
+/*//////////////index.php//////////////*/
+.homeBody{
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+}
+/*--------------section--------------*/
+.homeBody>section{
+	width: 66vw;
+	align-self: center;
+	margin-top: 10px;
+	background-color: rgba(255, 255, 255, 0.2);
+	padding: 10px;
+	border-radius: 20px;
+	border: solid 1px gray;
+}
+.homeBody>section>p{
+	line-height: 25px;
+	padding: 0 20px 15px 20px;
+}
+.homeBody>section>h3{
+	font-size: 30px;
+	margin-bottom: 15px;
+	text-decoration: underline;
+}
+.redirect{
+	color: rgba(255, 255, 255, 0.7);
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.5);
+	height: fit-content;
+	width: fit-content;
+	min-width: 10vw;
+	border-radius: 20px;
+	margin: 10px 5px 0 5px;
+	padding: 5px;
+	float: right;
+}
+.parcours{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: 5px;
+}
+.parcours>a>img{
+	background: gray;
+	border-radius: 40px;
+}
+.parcoursTxt{
+	display: flex;
+	flex-direction: column;
+}
+.parcoursTxt>a{
+	text-decoration: none;
+	color: orange;
+}
+.parcoursTxt>a:hover{
+	text-decoration: underline;
+	color: orange;
+}
+/*//////////////projects.php//////////////*/
+.projectsBody{
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+}
+
+/*--------------aside--------------*/
+aside{
+	border: rgba(255, 255, 255, 0.2) 1px solid;
+	width: 15vw;
+	margin: 8px 0 0 8px;
+	height: fit-content;
+}
+
+aside>hr{
+	border: rgba(255, 255, 255, 0.3) 1px solid;
+	border-radius: 1px;
+	width: 13vw;
+}
+
+
+/*~~~~searchBar~~~~*/
+aside>.searchBar{
+	width: 12vw;
+	margin: 10px;
+	border-radius: 8px;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/*~~~~filters~~~~*/
+aside>.filters{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 5px;
+	padding: 5px;
+}
+
+
+aside>.filters>.filter{
+	color: rgba(255, 255, 255, 0.7);
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.3);
+	width: fit-content;
+	border-radius: 20px;
+	padding: 3px 10px 3px 10px;
+	cursor: pointer;
+	transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+aside>.filters>.filter:hover{
+	background-color: rgba(255, 255, 255, 0.45);
+	color: white;
+}
+
+
+aside>.filters>.filter.filterActif{
+	background-color: rgba(255, 255, 255, 0.7);
+	color: #101010;
+}
+
+
+/*~~~~projects~~~~*/
+aside>.projects{
+	text-align: center;
+}
+aside>.projects>hr{
+	border: rgba(255, 255, 255, 0.2) 0.1px solid;
+	width: 7vw;
+}
+
+
+
+/*--------------myProjects--------------*/
+.myProjects{
+	display: flex;
+	flex-direction: column;
+	width: 85vw;
+	margin: 8px;
+}
+
+.myProjects>.title{
+	text-align: center;
+	text-decoration: underline;
+	margin-bottom: 8px;
+}
+
+.myProjects>.projects{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.project{
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+	border: solid 1px gray;
+	padding: 2px;
+	margin: 5px 0 5px 5px;
+	width: 26vw;
+	max-width: 26vw;
+	min-width: fit-content;
+	height: inherit;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.project:hover{
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.project>h3{
+	text-align: center;
+	margin: 5px 0 5px 0;
+}
+
+.project>.tags{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 5px;
+	max-width: 26vw;
+}
+
+.project>.tags>.tag{
+	color: rgba(255, 255, 255, 0.7);
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.5);
+	height: fit-content;
+	width: fit-content;
+	max-width: 26vw;
+	border-radius: 20px;
+	margin: 0 5px 0 5px;
+	padding: 3px 10px 3px 10px;
+}
+
+.project>.projectDesc{
+	max-width: 26vw;
+	padding: 5px;
+}
+
+/*~~~~image sur la carte~~~~*/
+.project>.projectImage{
+	width: 100%;
+	max-width: 27vw;
+	height: 160px;
+	object-fit: cover;
+	border-radius: 18px 18px 0 0;
+	display: block;
+}
+
+/*~~~~date sur la carte~~~~*/
+.project>.projectDate{
+	text-align: right;
+	font-size: 0.8em;
+	color: rgba(255, 255, 255, 0.5);
+	padding: 0 8px 6px 0;
+}
+
+/*~~~~meta date personnes temps sur la carte~~~~*/
+.project>.projectMeta{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 6px 8px;
+	font-size: 0.8em;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.project>.projectMeta>span{
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+
+.aucunResultat{
+	display: none;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.5);
+	padding: 20px;
+	width: 100%;
+}
+
+
+
+/*--------------modale projet--------------*/
+
+.projectModal{
+	position: fixed;
+	top: 70vh;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 55vw;
+	max-height: 80vh;
+	background-color: #282828;
+	color: white;
+	border: 1px rgba(255, 255, 255, 0.2) solid;
+	border-radius: 20px;
+	padding: 0;
+	outline: none;
+	transition: opacity 0.2s ease;
+}
+
+
+.projectModal::backdrop{
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+/*--------------contenu de la modale--------------*/
+.projectModal>.modalContent{
+	display: flex;
+	flex-direction: column;
+	padding: 15px;
+	gap: 10px;
+	overflow-y: auto;
+	max-height: 80vh;
+}
+
+/*~~~~en-tête de la modale~~~~*/
+.projectModal>.modalContent>.modalHeader{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: transparent;
+	border-radius: 0;
+	border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+	padding-bottom: 10px;
+}
+
+.projectModal>.modalContent>.modalHeader>h2{
+	font-size: 1.5em;
+}
+
+/*~~~~bouton fermer~~~~*/
+.projectModal>.modalContent>.modalHeader>.modalClose{
+	background: none;
+	border: none;
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 1.2em;
+	cursor: pointer;
+	padding: 4px 8px;
+	border-radius: 8px;
+	transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.projectModal>.modalContent>.modalHeader>.modalClose:hover{
+	background-color: rgba(255, 255, 255, 0.15);
+	color: white;
+}
+
+/*~~~~tags dans la modale~~~~*/
+
+.projectModal>.modalContent>.modalTags{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 5px;
+	align-items: center;
+}
+
+/*~~~~description dans la modale~~~~*/
+.projectModal>.modalContent>.modalDesc{
+	line-height: 25px;
+}
+
+/*~~~~image dans la modale~~~~*/
+.projectModal>.modalContent>.modalImage{
+	width: 100%;
+	max-height: 300px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+/*~~~~date dans la modale~~~~*/
+.projectModal>.modalContent>.modalDate{
+	font-size: 0.85em;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+/*~~~~meta dans la modale (date + personnes + temps)~~~~*/
+.projectModal>.modalContent>.modalMeta{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 14px;
+	font-size: 0.85em;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.projectModal>.modalContent>.modalMeta>span{
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+
+.cache{
+	display: none;
+}
+
+
+
+/*//////////////ajouter_projet.php//////////////*/
+.ajouterBody{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.ajouterFormSection{
+	width: 60vw;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.ajouterFormSection>h2{
+	text-align: center;
+	text-decoration: underline;
+}
+
+.champFormulaire{
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.champFormulaire>label{
+	font-size: 0.95em;
+}
+
+.champFormulaire>.hint{
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 0.85em;
+}
+
+.champFormulaire>input,
+.champFormulaire>textarea{
+	background-color: rgba(255, 255, 255, 0.15);
+	border: 1px rgba(255, 255, 255, 0.25) solid;
+	border-radius: 10px;
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1em;
+	padding: 8px 12px;
+	transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.champFormulaire>input:focus,
+.champFormulaire>textarea:focus{
+	outline: none;
+	border-color: rgba(255, 255, 255, 0.6);
+	background-color: rgba(255, 255, 255, 0.22);
+}
+
+.champFormulaire>textarea{
+	resize: vertical;
+}
+
+/*~~~~champ fichier~~~~*/
+.inputFichier{
+	background-color: rgba(255, 255, 255, 0.08);
+	border: 1px dashed rgba(255, 255, 255, 0.35) !important;
+	border-radius: 10px;
+	color: rgba(255, 255, 255, 0.7);
+	padding: 10px !important;
+	cursor: pointer;
+}
+
+.inputFichier::-webkit-file-upload-button{
+	background-color: rgba(255, 255, 255, 0.2);
+	border: none;
+	border-radius: 8px;
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
+	padding: 4px 12px;
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+/*~~~~checkboxes~~~~*/
+.checkboxTags{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.checkboxLabel{
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	cursor: pointer;
+	color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 20px;
+	padding: 3px 12px 3px 8px;
+	transition: background-color 0.15s ease;
+}
+
+.checkboxLabel:hover{
+	background-color: rgba(255, 255, 255, 0.45);
+}
+
+.checkboxLabel>input[type="checkbox"]{
+	accent-color: white;
+	width: 15px;
+	height: 15px;
+}
+
+/*~~~~bouton soumettre~~~~*/
+.btnSubmit{
+	background-color: rgba(255, 255, 255, 0.7);
+	color: #101010;
+	border: none;
+	border-radius: 20px;
+	padding: 8px 25px;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1em;
+	cursor: pointer;
+	align-self: flex-end;
+	transition: background-color 0.15s ease;
+}
+
+.btnSubmit:hover{
+	background-color: white;
+}
+
+/*~~~~erreurs de validation~~~~*/
+.erreurs{
+	background-color: rgba(255, 80, 80, 0.2);
+	border: 1px rgba(255, 80, 80, 0.4) solid;
+	border-radius: 10px;
+	padding: 10px 10px 10px 28px;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	color: rgba(255, 180, 180, 1);
+}
+
+
+
+/*//////////////ajouter_projet.php//////////////*/
+.ajouterBody{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+}
+
+/*--------------formulaire--------------*/
+.ajouterFormSection{
+	width: 60vw;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.ajouterFormSection>h2{
+	text-align: center;
+	text-decoration: underline;
+}
+
+/*~~~~champ générique~~~~*/
+.champFormulaire{
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.champFormulaire>label{
+	font-size: 0.95em;
+}
+
+.champFormulaire>.hint{
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 0.85em;
+}
+
+.champFormulaire>input,
+.champFormulaire>textarea{
+	background-color: rgba(255, 255, 255, 0.15);
+	border: 1px rgba(255, 255, 255, 0.25) solid;
+	border-radius: 10px;
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1em;
+	padding: 8px 12px;
+	transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.champFormulaire>input:focus,
+.champFormulaire>textarea:focus{
+	outline: none;
+	border-color: rgba(255, 255, 255, 0.6);
+	background-color: rgba(255, 255, 255, 0.22);
+}
+
+.champFormulaire>textarea{
+	resize: vertical;
+}
+
+/*~~~~checkboxes tags~~~~*/
+.checkboxTags{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.checkboxLabel{
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	cursor: pointer;
+	color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 20px;
+	padding: 3px 12px 3px 8px;
+	transition: background-color 0.15s ease;
+}
+
+.checkboxLabel:hover{
+	background-color: rgba(255, 255, 255, 0.45);
+}
+
+.checkboxLabel>input[type="checkbox"]{
+	accent-color: white;
+	width: 15px;
+	height: 15px;
+}
+
+/*~~~~bouton soumettre~~~~*/
+.btnSubmit{
+	background-color: rgba(255, 255, 255, 0.7);
+	color: #101010;
+	border: none;
+	border-radius: 20px;
+	padding: 8px 25px;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1em;
+	cursor: pointer;
+	align-self: flex-end;
+	transition: background-color 0.15s ease;
+}
+
+.btnSubmit:hover{
+	background-color: white;
+}
+
+/*~~~~erreurs de validation~~~~*/
+.erreurs{
+	background-color: rgba(255, 80, 80, 0.2);
+	border: 1px rgba(255, 80, 80, 0.4) solid;
+	border-radius: 10px;
+	padding: 10px 10px 10px 28px;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	color: rgba(255, 180, 180, 1);
+}
+
+
+/*//////////////login.php//////////////*/
+.loginBody{
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.loginFormSection{
+	width: 35vw;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.loginFormSection>h2{
+	text-align: center;
+	text-decoration: underline;
+}
+
+.loginErreur{
+	background-color: rgba(255, 80, 80, 0.2);
+	border: 1px rgba(255, 80, 80, 0.4) solid;
+	border-radius: 10px;
+	padding: 8px 14px;
+	color: rgba(255, 180, 180, 1);
+	text-align: center;
+}
+
+.btnSubmit{
+	margin-top: 5px;
+}
+
+/*//////////////modifier_projet.php//////////////*/
+
+/*~~~~bouton modifier sur la carte~~~~*/
+.project{
+	position: relative;
+}
+
+.btnModifier{
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: white;
+	text-decoration: none;
+	border-radius: 8px;
+	padding: 3px 8px;
+	font-size: 1em;
+	transition: background-color 0.15s ease;
+	z-index: 1;
+}
+
+.btnModifier:hover{
+	background-color: rgba(255, 255, 255, 0.45);
+}
+
+/*~~~~aperçu image actuelle~~~~*/
+.imageActuelle{
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-bottom: 6px;
+}
+
+.apercuImageActuelle{
+	width: 180px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 10px;
+	border: 1px rgba(255,255,255,0.2) solid;
+}
+
+/*~~~~actions du formulaire~~~~*/
+.actionsFormulaire{
+	display: flex;
+	justify-content: flex-end;
+}
+
+/*~~~~formulaire de suppression~~~~*/
+.formSupprimer{
+	border-top: 1px rgba(255, 80, 80, 0.3) solid;
+	padding-top: 15px;
+	margin-top: 5px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.btnSupprimer{
+	background: none;
+	border: 1px rgba(255, 80, 80, 0.5) solid;
+	border-radius: 20px;
+	color: rgba(255, 150, 150, 1);
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 0.9em;
+	padding: 6px 20px;
+	cursor: pointer;
+	transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btnSupprimer:hover{
+	background-color: rgba(255, 80, 80, 0.2);
+	color: rgba(255, 180, 180, 1);
+}
+
+
+/*//////////////gerer_tags.php//////////////*/
+.gererTagsSection{
+	gap: 20px;
+}
+
+.tagsSousSection{
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.tagsSousSection>h3{
+	text-decoration: underline;
+}
+
+.separateur{
+	border: rgba(255, 255, 255, 0.15) 1px solid;
+	width: 100%;
+}
+
+/*~~~~formulaire créer~~~~*/
+.ligneFormTag{
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+	align-items: center;
+}
+
+.ligneFormTag>input{
+	flex: 1;
+	background-color: rgba(255, 255, 255, 0.15);
+	border: 1px rgba(255, 255, 255, 0.25) solid;
+	border-radius: 10px;
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1em;
+	padding: 7px 12px;
+}
+
+.ligneFormTag>input:focus{
+	outline: none;
+	border-color: rgba(255, 255, 255, 0.6);
+}
+
+.ligneFormTag>.btnSubmit{
+	align-self: auto;
+}
+
+/*~~~~liste des tags~~~~*/
+.listeTags{
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.ligneTag{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+	background-color: rgba(255, 255, 255, 0.08);
+	border-radius: 12px;
+	padding: 6px 10px;
+}
+
+/*~~~~formulaire renommer (dans la ligne)~~~~*/
+.formRenommerTag{
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+	align-items: center;
+	flex: 1;
+}
+
+.formRenommerTag>input[type="text"]{
+	flex: 1;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px rgba(255, 255, 255, 0.2) solid;
+	border-radius: 8px;
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 0.95em;
+	padding: 5px 10px;
+}
+
+.formRenommerTag>input[type="text"]:focus{
+	outline: none;
+	border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btnRenommer{
+	background-color: rgba(255, 255, 255, 0.2);
+	border: none;
+	border-radius: 8px;
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 0.85em;
+	padding: 5px 12px;
+	cursor: pointer;
+	white-space: nowrap;
+	transition: background-color 0.15s ease;
+}
+
+.btnRenommer:hover{
+	background-color: rgba(255, 255, 255, 0.35);
+}
+
+/*~~~~compteur de projets~~~~*/
+.nbProjets{
+	font-size: 0.8em;
+	color: rgba(255, 255, 255, 0.4);
+	white-space: nowrap;
+}
+
+/*~~~~bouton supprimer tag~~~~*/
+.btnSupprimerTag{
+	background: none;
+	border: 1px rgba(255, 80, 80, 0.4) solid;
+	border-radius: 8px;
+	color: rgba(255, 130, 130, 1);
+	font-size: 0.85em;
+	padding: 4px 9px;
+	cursor: pointer;
+	transition: background-color 0.15s ease;
+}
+
+.btnSupprimerTag:hover{
+	background-color: rgba(255, 80, 80, 0.2);
+}
+
+/*~~~~message succès~~~~*/
+.succes{
+	background-color: rgba(80, 200, 120, 0.15);
+	border: 1px rgba(80, 200, 120, 0.35) solid;
+	border-radius: 10px;
+	padding: 8px 14px;
+	color: rgba(150, 230, 170, 1);
+}
+
+.aucunTag{
+	color: rgba(255, 255, 255, 0.4);
+	font-style: italic;
+}
+
+
+/*--------------HTML dans la description longue (modale)--------------*/
+.modalDesc p         { margin: 0 0 10px 0; line-height: 1.6;
+}
+
+.modalDesc h2,
+.modalDesc h3,
+.modalDesc h4        { margin: 14px 0 6px 0;
+}
+
+.modalDesc ul,
+.modalDesc ol        { padding-left: 20px; margin: 0 0 10px 0;
+}
+
+.modalDesc li        { margin-bottom: 4px; line-height: 1.5;
+}
+
+.modalDesc a         { color: rgba(180, 210, 255, 1);
+}
+
+.modalDesc a:hover   { color: white;
+}
+.modalDesc code      {
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 0.9em;
+    font-family: monospace;
+}
+
+.modalDesc pre       {
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 8px;
+    padding: 10px 14px;
+    overflow-x: auto;
+    font-size: 0.88em;
+    line-height: 1.5;
+}
+
+.modalDesc pre code  { background: none; padding: 0;
+}
+
+.modalDesc blockquote{
+    border-left: 3px rgba(255, 255, 255, 0.3) solid;
+    margin: 0 0 10px 0;
+    padding: 4px 0 4px 14px;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+}
+
+.modalDesc hr        {
+    border: none;
+    border-top: 1px rgba(255, 255, 255, 0.15) solid;
+    margin: 12px 0;
+}
+
+.modalDesc img       {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 6px 0;
+}
+
+.modalDesc strong    { font-weight: bold;
+}
+
+.modalDesc em        { font-style: italic;
+}
+
+
+
+/*//////////////contact.php//////////////*/
+.contactBody{
+	display: flex;
+	font-size: xx-large;
+	font-weight: bold;
+	justify-content: space-around;
+	flex-direction: row;
+
+}
+
+
+/*//////////////projets phares — index.php//////////////*/
+
+.sectionProjetsPhares>.projetsPhares{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+
+.sectionProjetsPhares .project{
+	width: 28vw;
+	min-width: 200px;
+}
+
+/*~~~~icône étoile dans le titre de la section~~~~*/
+.iconPhare{
+	color: rgba(255, 210, 80, 0.9);
+	font-size: 0.85em;
+	vertical-align: middle;
+	margin-right: 4px;
+}
+
+/*//////////////checkbox projet phare — formulaires//////////////*/
+.checkboxPhare{
+	margin-top: 5px;
+	background-color: rgba(255, 210, 80, 0.12);
+	border: 1px rgba(255, 210, 80, 0.35) solid;
+	border-radius: 20px;
+	padding: 6px 14px 6px 10px;
+	color: rgba(255, 220, 120, 1);
+	width: fit-content;
+}
+
+.checkboxPhare:hover{
+	background-color: rgba(255, 210, 80, 0.22);
+}
+
+.checkboxPhare .hint{
+	color: rgba(255, 210, 80, 0.55);
+}
